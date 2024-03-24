@@ -2,8 +2,8 @@ import datetime
 import random
 import os
 
-start_date = datetime.datetime(2020, 1, 1)
-end_date = datetime.datetime(2020, 1, 28)
+start_date = datetime.datetime(2023, 12, 10) # Year, month, day
+end_date = datetime.datetime(2024, 10, 10) # Year, month, day
 
 for i in range((end_date - start_date).days):
     random_date = start_date + datetime.timedelta(days=i, hours=random.randint(0, 23), minutes=random.randint(0, 59), seconds=random.randint(0, 59))
@@ -11,7 +11,7 @@ for i in range((end_date - start_date).days):
     file_path = "random.txt"
 
     with open(file_path, "w") as f:
-        f.write(str(random.randint(1, 100)))
+        f.write(str(random.randint(1, 1000)))
 
     os.system("git add " + file_path)
 
